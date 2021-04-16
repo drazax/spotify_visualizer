@@ -1,0 +1,5 @@
+input tokens for user/playlists/...
+view playlists
+dive into songs to see details (valence/danceability/energy/...)
+search for artists/songs/playlists
+implement ui
