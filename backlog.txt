@@ -10,4 +10,4 @@ set up spotify login?
 
 Code quality:
 refactor argument parser/config loader into separate library
-
+add functionality to debug

@@ -6,6 +6,9 @@ import spotipy
 
 from spotipy.oauth2 import SpotifyClientCredentials
 
+def debug(aMessage):
+    print(aMessage)
+
 def loadConfig(aConfigFile):
     with open(aConfigFile, 'r') as read_from:
         for line in read_from:
