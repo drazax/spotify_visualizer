@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import argparse
+import os
 import spotipy
 
 from spotipy.oauth2 import SpotifyClientCredentials
