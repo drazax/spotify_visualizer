@@ -12,8 +12,8 @@ def debug(aMessage):
 def loadConfig(aConfigFile):
     with open(aConfigFile, 'r') as read_from:
         for line in read_from:
-            key, value = line.split(maxsplit=1)
-            os.environ[key] = value.rstrip()
+            environment_variable_key, environment_variable_value = line.split(maxsplit=1)
+            os.environ[environment_variable_key] = environment_variable_value.rstrip()
 
 def addArguments(aArgumentParser):
     aArgumentParser.add_argument('-c', '--config', nargs='?', default='config.cfg', help='Specifies a new config file')
