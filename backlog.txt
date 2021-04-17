@@ -3,6 +3,7 @@ input tokens for user/playlists/...
 view playlists
 dive into songs to see details (valence/danceability/energy/...)
 search for artists/songs/playlists
+look into authorization scopes and adding them when necessary (on the fly functionality later)
 
 UI:
 star chart (for acousticness, danceability, energy, instrumentalness, liveness, speechiness, valence)
@@ -11,3 +12,4 @@ set up spotify login?
 Code quality:
 refactor argument parser/config loader into separate library
 add functionality to debug
+move all magic strings to external source

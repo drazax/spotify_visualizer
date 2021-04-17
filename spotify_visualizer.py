@@ -4,10 +4,11 @@ import argparse
 import os
 import spotipy
 
-from spotipy.oauth2 import SpotifyClientCredentials
+from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
 
-def debug(aMessage):
-    print(aMessage)
+def debug(*aMessage):
+    for message in aMessage:
+        print(message)
 
 def loadConfig(aConfigFile):
     with open(aConfigFile, 'r') as read_from:
@@ -24,5 +25,6 @@ if __name__ == '__main__':
     arguments = argument_parser.parse_args()
     loadConfig(arguments.config)
 
-    spotify_client = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
-
+    spotify_client = spotipy.Spotify(auth_manager=SpotifyOAuth(scope='playlist-read-private'), client_credentials_manager=SpotifyClientCredentials())
+    playlists = spotify_client.user_playlists(os.environ['SPOTIPY_USER'], limit=20)
+    debug(playlists)
