@@ -1,5 +1,13 @@
+Functionality:
 input tokens for user/playlists/...
 view playlists
 dive into songs to see details (valence/danceability/energy/...)
 search for artists/songs/playlists
-implement ui
+
+UI:
+star chart (for acousticness, danceability, energy, instrumentalness, liveness, speechiness, valence)
+set up spotify login?
+
+Code quality:
+refactor argument parser/config loader into separate library
+
